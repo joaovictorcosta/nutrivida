@@ -1,0 +1,152 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04/07/2016, 08:19:37
+    Author     : guilherme
+*/
+
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 80px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #e0e0e0;
+    border-right: 1px solid #eee;
+  }
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.navbar-fixed-top{
+  background-image: none;
+}
+
+#fundo{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+hr{
+    color: #337ab7;
+    background-color: #337ab7;
+    height: 2px;
+}
+
+
+#filtros{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#info_legendas{
+    border: 1px solid rgb(221, 221, 221); 
+    border-radius: 5px; 
+    padding: 10px;
+    margin-top: 20px; 
+    text-align: center; 
+    font-size: 15px; 
+    background: rgb(241, 241, 241);
+}
+
+#filtroInicial{
+    display: block;
+}
+
+#filtroFinal{
+    display: block;
+}
+
+.component-align-bottom{
+    float: none;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+/*#usuario_menu{
+    border-color: #337ab7;
+    border-width: 30px;
+}*/
+
+/*#barra_navegacao{
+    background-color: #e6e6e6;
+}*/
