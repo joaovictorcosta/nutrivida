@@ -7,7 +7,7 @@
                 <div id="painel_gerenciamento" class="col-md-4">
                     <h3 style="color: #337ab7;">Paciente <i class="fa fa-user-md"></i></h3>
                     <br>
-                    <a id="usuario_menu" href="../views/menu.php?pag=paciente" class="btn-lg btn-primary" title="Usuários">
+                    <a id="usuario_menu" href="../views/menu.php?pag=cad_paciente" class="btn-lg btn-primary" title="Usuários">
                         <span class="fa fa-list"></span>
 <!--                        Usuários-->
                     </a>&nbsp;

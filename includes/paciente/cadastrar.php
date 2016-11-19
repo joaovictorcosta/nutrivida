@@ -15,34 +15,23 @@
 
         <div class="panel-body">
             
-            <form id="form_cad_usuario" data-toggle="validator" class="form-horizontal" method="POST" action="../config/usuario/processa_cad_usuario.php">
+            <form id="form_cad_usuario" data-toggle="validator" method="POST" action="../config/usuario/processa_cad_usuario.php">
                 
                 <!--DADOS DO USUÁRIO-->
                 <div class="page-header">
-                    <h4>Dados do Usuário</h4s>
+                    <h4>Dados do Paciente</h4>
                     <hr>
                 </div>
                 
-                
-                <div class="form-group">                 
-                    <label for="status_check" class="col-sm-2 control-label">Ativo</label>
-                    <div class="col-sm-10">
-                        <div class="checkbox">
-                            <label>
-                                <input id="status_check" name="status_check" type="checkbox" value="ativo" checked>
-                            </label>
-                        </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="tipoPessoa" class="required">Nome</label>
+                        <input type="text" class="form-control" required="">
                     </div>
                 </div>
                 
-                <div class="form-group">
-                    <label for="nome_usuario" class="col-sm-2 control-label">Nome</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nome_usuario" name="nome_usuario" placeholder="Nome" data-error="Por favor, informe o nome completo para o usuário." required>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                </div>
                 
+                <br><br>
                 <!--DADOS DE ACESSO-->
                 <div class="page-header">
                     <h4>Dados de Acesso</h4>
