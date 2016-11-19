@@ -52,6 +52,7 @@ verifica_acesso();
         
         //Pacientes
         $pagina['paciente'] = "../includes/paciente/lista.php";
+        $pagina['cad_paciente'] = "../includes/paciente/lista.php";
 
         
         //Se a variável 'link' for diferente de vazio.

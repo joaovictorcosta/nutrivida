@@ -17,9 +17,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 
-            <ul class="nav navbar-nav">
+<!--            <ul class="nav navbar-nav">
                 
-                <!--Gerenciamento Dropdown-->
+                Gerenciamento Dropdown
                 <li id="gerenciamento-dropdown"class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Gerenciamento"><small>GERENCIAMENTO <span class="fa fa-gears"></span></small><span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -29,7 +29,7 @@
                     </ul>
                 </li>
                 
-                <!--Jogos Dropdown-->
+                Jogos Dropdown
                 <li id="jogos-dropdown"class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Jogos"><small>JOGOS <span class="fa fa-trophy"></span></small><span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -40,7 +40,7 @@
                     </ul>
                 </li>
                 
-                <!--Apostas Dropdown-->
+                Apostas Dropdown
                 <li id="gerenciamento-dropdown"class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Apostas"><small>APOSTAS <span class="fa fa-ticket"></span></small><span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -48,7 +48,7 @@
                         <li><a href="../views/menu.php?pag=regionais"><small><i class="fa fa-bar-chart"></i> RESUMO</small></a></li>
                     </ul>
                 </li>
-            </ul>                    
+            </ul>                    -->
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Sair"><?php usuario_logado(); ?><span style="color: red;" class="fa fa-power-off"></span></a>
