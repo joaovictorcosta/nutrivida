@@ -15,7 +15,7 @@
 
         <div class="panel-body">
             
-            <form id="form_cad_usuario" data-toggle="validator" method="POST" action="../config/usuario/processa_cad_usuario.php">
+            <form id="form_cad_usuario" data-toggle="validator" method="POST" action="../config/paciente/processa_cad_paciente.php">
                 
                 <!--DADOS DO USUÁRIO-->
                 <div class="page-header">
@@ -24,24 +24,25 @@
                 </div>
                 
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for="tipoPessoa" class="required">Sexo</label>
-                            <input type="radio" name="sexo" id="sexo" class="form-control" value="Masculino">
-                            <input type="radio" name="sexo" id="sexo" class="form-control" value="Feminino">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-4">
+                    
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="tipoPessoa" class="required">Nome</label>
                             <input type="text" class="form-control" required="">
                         </div>
                     </div>
+                    
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="sexo_div">Sexo</label>
+                            <select class="form-control">
+                                <option value="m">Masculino</option>
+                                <option value="f">Feminino</option>
+                            </select>
+                        </div>
+                    </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="form-group">
                             <label for="dt-picker">Data/Hora</label>
                             <div class='input-group date' id='datetimepicker'>
@@ -59,73 +60,55 @@
                 <br><br>
                 <!--DADOS DE ACESSO-->
                 <div class="page-header">
-                    <h4>Dados de Acesso</h4>
+                    <h4>Endereço</h4>
                     <hr>
                 </div>
                 
-                <div class="form-group">
-                    <label for="login_usuario" class="col-sm-2 control-label">Usuário</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="login_usuario" name="login_usuario" placeholder="Nome de usuário" data-error="Por favor, informe o nome de usuário que será usado no login." required>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="senha_usuario" class="col-sm-2 control-label">Senha</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="senha_usuario" name="senha_usuario" placeholder="Senha" data-error="Por favor, informe a senha do usuário." required>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="permissao_usuario" class="col-sm-2 control-label">Permissão</label>
-                    <div class="col-sm-10">
-                        <select class="form-control" id="permissao_usuario" name="permissao_usuario" data-error="Por favor, selecione um nível de permissão para o usuário." required>
-                            <?php
-                                preeche_permiss_combo();
-                            ?>
-                        </select>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                </div>
-                
-                <!--DADOS DA  REGIONAL-->
-                <div class="page-header">
-                    <h4>Regionais Permitidas</h4>
-                    <hr>
-                </div>
-                
-                <?php
-                $usuario = lista_regionais();
-                while ($reg = mysqli_fetch_assoc($usuario)) 
-                {
-                    $id_regional = $reg['id'];
-                    $nome_regional = $reg['nome_reg'];
+               <div class="row">
                     
-                    if($reg['flag_ativo'] == 1){
-                ?>
+                   <div class="col-md-4">
+                       <div class="form-group">
+                           <label for="logradouro" class="required">Logradouro</label>
+                           <input id="logradouro" nome="logradouro" type="text" class="form-control" required="">
+                       </div>
+                   </div>
+                   
+                   <div class="col-md-2">
+                       <div class="form-group">
+                           <label for="bairro" class="required">Bairro</label>
+                           <input id="bairro" nome="bairro" type="text" class="form-control" required="">
+                       </div>
+                   </div>
+
+                   <div class="col-md-1">
+                       <div class="form-group">
+                           <label for="numero" class="required">Número</label>
+                           <input id="numero" nome="numero" type="text" class="form-control" required="">
+                       </div>
+                   </div>
+
+                   <div class="col-md-1">
+                       <div class="form-group">
+                           <label for="complemento" class="required">Complemento</label>
+                           <input id="complemento" nome="complemento" type="text" class="form-control">
+                       </div>
+                   </div>
+                   
+                   <div class="col-md-3">
+                       <div class="form-group">
+                           <label for="cidade" class="required">Cidade</label>
+                           <input id="cidade" nome="cidade" type="text" class="form-control" required="">
+                       </div>
+                   </div>
+                   
+                   <div class="col-md-1">
+                       <div class="form-group">
+                           <label for="uf" class="required">UF</label>
+                           <input id="uf" nome="uf  " type="text" class="form-control">
+                       </div>
+                   </div>
                     
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <div class="col-sm-1">
-                            <div class="checkbox">
-                                <label>
-                                    <label class="col-md-10" for="<?php echo"regional_$id_regional" ?>">
-                                        <input type="checkbox" name="<?php echo"regional[$id_regional]"; ?>" id="<?php echo"regional_$id_regional" ?>" value="<?php echo $nome_regional; ?>"> 
-                                        <small><?php echo $nome_regional; ?></small>
-                                    </label>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>j
-                
-                <?php
-                    }
-                }
-                ?>
+                </div>
                 
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">

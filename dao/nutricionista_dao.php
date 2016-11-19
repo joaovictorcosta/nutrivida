@@ -12,3 +12,35 @@ function sel_login_nutricionista($login, $senha) {
 
     return mysqli_fetch_assoc($result);
 }
+
+function cadastra_nutricionista($nome, $data_nascimento, $logradouro, $numero_casa, $complemento, $cidade, $uf, $sexo)
+    {
+        $link = conectar();
+
+        $query =  "INSERT INTO `tb_paciente` "
+                . "(`nome`, `data_nascimento`, `logradouro`, `numero_casa`, "
+                . "`complemento`, `cidade`, `uf`, `sexo`) "
+                . "VALUES ('$nome','$data_nascimento', '$logradouro', '$numero_casa', "
+                . "'$complemento', $cidade, '$uf', '$sexo')";
+        
+        mysqli_query($link, $query);
+        
+        
+        if(mysqli_affected_rows($link) > 0)
+        {
+            //header("Location: ../../views/menu.php?pag=pacientes");
+            
+            echo'cadastrou';
+            
+            //$_SESSION['status_registro'] = "Registro inserido com sucesso!";
+        }
+        else{
+            //header("Location: ../../views/menu.php?pag=pacientes");
+            
+            echo'erro';
+            
+            $_SESSION['alerta_erro'] = true;
+            
+            $_SESSION['status_registro'] = "Erro ao inserir registro! Por favor, verifique e tente novamente.";
+        }
+    }
