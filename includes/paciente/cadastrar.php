@@ -23,13 +23,38 @@
                     <hr>
                 </div>
                 
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="tipoPessoa" class="required">Nome</label>
-                        <input type="text" class="form-control" required="">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="tipoPessoa" class="required">Sexo</label>
+                            <input type="radio" name="sexo" id="sexo" class="form-control" value="Masculino">
+                            <input type="radio" name="sexo" id="sexo" class="form-control" value="Feminino">
+                        </div>
                     </div>
                 </div>
                 
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="tipoPessoa" class="required">Nome</label>
+                            <input type="text" class="form-control" required="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="dt-picker">Data/Hora</label>
+                            <div class='input-group date' id='datetimepicker'>
+                                <input type='text' id="datahora" name="datahora" class="form-control js_date_time"
+                                       required="true"
+                                       />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <br><br>
                 <!--DADOS DE ACESSO-->

@@ -96,7 +96,6 @@ verifica_acesso();
     
     <!--    Plugins JS-->
     <script type="text/javascript" charset="utf-8"> 
-        //$('.js_money').mask('0000000000.00', {reverse: true});
         $('.js_money').mask('000.000.000.000.000,00', {reverse: true});
         $('.js_date_time').mask('00/00/0000 00:00');
         $('.js_date').mask('00/00/0000');

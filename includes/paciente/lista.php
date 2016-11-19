@@ -34,7 +34,7 @@
             <br />
             <div id="filtros">
                 <a id="home_voltar" href="../views/menu.php" class="btn btn-primary" title="Voltar ao início"><i class="fa fa-home"></i></a>
-                <a id="cad_usuario" href="../views/menu.php?pag=cad_usuario" class="pull-right btn btn-primary" title="Adicionar Usuário"><i class="fa fa-plus"></i></a>
+                <a id="cad_usuario" href="../views/menu.php?pag=cad_paciente" class="pull-right btn btn-primary" title="Adicionar Usuário"><i class="fa fa-plus"></i></a>
                 
                 <div id="info_legendas">
                     <span class="label label-primary"><i class="fa fa-home"></i> - Menu Inicial</span>
