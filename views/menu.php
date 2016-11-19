@@ -2,6 +2,7 @@
 session_start();
 include_once('../config/seguranca.php');
 include_once('../config/funcoes.php');
+include_once('../dao/paciente_dao.php');
 
 
 //Verifica se o usuário está logado.

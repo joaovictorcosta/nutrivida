@@ -1,5 +1,7 @@
 <?php
 
+include_once(__DIR__ . '/../models/conexao.php');
+
 //Função que seleciona todos os usuários do banco de dados
 function lista_pacientes() {
     $link = conectar();
